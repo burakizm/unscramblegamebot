@@ -4,7 +4,7 @@ import logging, random, string, time
 import threading 
 import os
 
-TOKEN= '1408034311:AAFQe2XT19p024FamqHD1fW8NG2qx0Xea4k'
+TOKEN= '5070141257:AAEUCWglLYEUX0NUMslHl0FE0bQiyXDm5FA'
 bot_id = int(TOKEN.split(':')[0])
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -212,7 +212,7 @@ def startGame(update, context):
             ]
         }
 
-        keyboard = [[InlineKeyboardButton("Join", url=f'https://t.me/unscramblegamebot?start={chat_id}', callback_data='1')]]
+        keyboard = [[InlineKeyboardButton("Join", url=f'https://t.me/KelimeyiAnlatBot?start={chat_id}', callback_data='1')]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text('An unscamble game is starting!\nJoin the game using the join button.\n\nYou can always /force start the game.', reply_markup=reply_markup)
         games[chat_id]["gameStarterTimers"][0].start()
